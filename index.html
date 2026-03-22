@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTOCEM | Proyectos Topográficos y Construcciones</title>
+
+  <!-- Google Fonts — Requerimiento escolar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ENCABEZADO Y NAVEGACIÓN
+       Responsable: Esteban
+       Estado: listo — actualizar enlaces si cambian
+  ====================================================== -->
+  <header class="encabezado" id="inicio">
+    <a href="index.html" class="logo">
+      <img src="img/brand.jpg" alt="PROTOCEM logo" />
+    </a>
+    <nav class="navegacion">
+      <a href="#quienes-somos">¿Quiénes somos?</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="paginas/said.html">Said</a>
+      <a href="paginas/katrina.html">Katrina</a>
+      <a href="paginas/jonathan.html">Jonathan</a>
+      <a href="paginas/contacto.html" class="boton-nav">Contáctanos</a>
+    </nav>
+  </header>
+
+
+  <!-- =====================================================
+       HERO — BANNER PRINCIPAL
+       Responsable: Esteban
+       Estado: listo — fondo usa img/banner.jpg
+  ====================================================== -->
+  <section class="hero">
+    <div class="hero-contenido">
+      <p class="hero-subtitulo">Aguascalientes, México &mdash; Desde 2008</p>
+      <h1>PROTOCEM</h1>
+      <p class="hero-descripcion">Proyectos Topográficos y Construcciones</p>
+      <p class="hero-slogan"><em>Construyendo Juntos</em></p>
+      <div class="hero-botones">
+        <a href="#proyectos" class="boton">Ver Proyectos</a>
+        <a href="paginas/contacto.html" class="boton-borde">Contáctanos</a>
+      </div>
+    </div>
+    <div class="hero-scroll">&#8595;</div>
+  </section>
+
+
+  <!-- =====================================================
+       CIFRAS DESTACADAS
+       Responsable: Esteban
+       Estado: listo — cifras reales del curriculum
+  ====================================================== -->
+  <section class="cifras">
+    <div class="cifra">
+      <span class="cifra-numero">+17</span>
+      <span class="cifra-texto">Años de experiencia</span>
+    </div>
+    <div class="cifra">
+      <span class="cifra-numero">+20</span>
+      <span class="cifra-texto">Proyectos ejecutados</span>
+    </div>
+    <div class="cifra">
+      <span class="cifra-numero">$127M</span>
+      <span class="cifra-texto">Monto máximo de obra</span>
+    </div>
+    <div class="cifra">
+      <span class="cifra-numero">3+</span>
+      <span class="cifra-texto">Estados del país</span>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       QUIÉNES SOMOS
+       Responsable: Said
+       Pendiente:
+       - Agregar más texto del curriculum empresarial
+       - Agregar imágenes de trabajadores en campo (del Word)
+       - Agregar imagen de maquinaria pesada (del Word)
+  ====================================================== -->
+  <section class="seccion" id="quienes-somos">
+    <div class="seccion-encabezado">
+      <span class="etiqueta">La empresa</span>
+      <h2>¿Quiénes somos?</h2>
+    </div>
+
+    <div class="dos-columnas">
+      <div class="columna-texto">
+        <p>
+          Somos una empresa dedicada a realizar todo tipo de trabajos relacionados
+          con <strong>obra industrial, de caminos, urbanización y edificación</strong>,
+          manteniendo un personal altamente calificado para realizar todo tipo de trabajos.
+        </p>
+        <p>
+          Prestamos servicios de obra civil en construcción de
+          <strong>naves industriales, caminos, carreteras, terracerías, pavimentos,
+          construcciones de edificación</strong>, acabados, impermeabilizaciones,
+          mantenimiento de subestaciones eléctricas, plantas de emergencia,
+          instalaciones contra incendio, aire acondicionado, guarniciones,
+          banquetas y urbanización en general.
+        </p>
+        <p>
+          Contando con excelente capital humano de vasta experiencia y profesionalismo,
+          con trabajos de <em>grandes responsabilidades</em>, cuidando siempre los
+          detalles para entregar una obra <u>limpia, bien ejecutada en tiempo y forma.</u>
+        </p>
+        <!-- TODO Said: agregar más párrafos del curriculum empresarial aquí -->
+
+        <div class="datos-empresa">
+          <p><strong>Representante Legal:</strong> I.C. Carlos Eduardo Macías Chairez</p>
+          <p><strong>Cédula Profesional:</strong> No. 6151593</p>
+          <p><strong>Dirección:</strong> J. Encarnación Payen #515, Fracc. Olivares Santana</p>
+          <p><strong>Email:</strong> protocem@hotmail.com</p>
+        </div>
+      </div>
+
+      <div class="columna-imagenes">
+        <img src="img/equipo.jpg" alt="Equipo PROTOCEM en obra" class="imagen-principal" />
+        <div class="imagenes-secundarias">
+          <img src="img/quienesomos.jpg" alt="Instalaciones PROTOCEM" />
+          <img src="img/trabajos.jpg" alt="Trabajos de construcción" />
+          <!-- TODO Said: reemplazar con imagen de trabajadores en campo del Word -->
+          <!-- <img src="img/trabajadores-campo.jpg" alt="Trabajadores en campo" /> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       SERVICIOS
+       Responsable: Katrina
+       Pendiente:
+       - Agregar descripción más detallada a cada servicio
+       - Reemplazar íconos con imágenes reales del Word
+       - Agregar imagen de maquinaria pesada
+       - Agregar imagen de topografía en campo
+  ====================================================== -->
+  <section class="seccion fondo-oscuro" id="servicios">
+    <div class="seccion-encabezado centrado">
+      <span class="etiqueta">Lo que hacemos</span>
+      <h2 class="texto-blanco">Nuestros Servicios</h2>
+      <p class="texto-gris">
+        Empresa capaz de realizar todo tipo de trabajos relacionados
+        con obra industrial, de caminos, urbanización y edificación.
+      </p>
+    </div>
+
+    <div class="servicios-grid">
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen del Word -->
+        <!-- <img src="img/nave-industrial.jpg" alt="Naves industriales" /> -->
+        <div class="tarjeta-icono">🏭</div>
+        <h3>Naves Industriales</h3>
+        <p>Construcción, ampliación y mantenimiento periódico de naves industriales.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen del Word -->
+        <!-- <img src="img/carretera.jpg" alt="Infraestructura carretera" /> -->
+        <div class="tarjeta-icono">🛣️</div>
+        <h3>Infraestructura Carretera</h3>
+        <p>Trazo, nivelación, control de carreteras y construcción de pavimentos.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <div class="tarjeta-icono">🏙️</div>
+        <h3>Urbanizaciones</h3>
+        <p>Desarrollo de fraccionamientos, guarniciones, banquetas y vialidades.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <img src="img/Pavimento.jpg" alt="Pavimentos hidráulicos y asfálticos" />
+        <h3>Pavimentos</h3>
+        <p>Pavimentos hidráulicos y asfálticos de alta resistencia y durabilidad.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen del Word -->
+        <!-- <img src="img/planta-tratamiento.jpg" alt="Planta de tratamiento" /> -->
+        <div class="tarjeta-icono">💧</div>
+        <h3>Plantas de Tratamiento</h3>
+        <p>Construcción de plantas de tratamiento de aguas residuales (P.T.A.R).</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen del Word -->
+        <!-- <img src="img/topografia.jpg" alt="Estudios topográficos" /> -->
+        <div class="tarjeta-icono">📐</div>
+        <h3>Estudios Topográficos</h3>
+        <p>Levantamientos topográficos, nivelación y control de obra.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <img src="img/Construccion de residencial.jpg" alt="Construcción de viviendas" />
+        <h3>Construcción de Viviendas</h3>
+        <p>Edificación residencial con acabados de alta calidad.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <img src="img/Construcción de estructuras metálicas.jpg" alt="Estructuras metálicas" />
+        <h3>Estructuras Metálicas</h3>
+        <p>Construcción de estructuras metálicas y laminado en techumbres.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <img src="img/Canalizaciones.jpg" alt="Infraestructura hidráulica" />
+        <h3>Infraestructura Hidráulica</h3>
+        <p>Canalizaciones, drenajes, agua potable e infraestructura eléctrica.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen de maquinaria del Word -->
+        <!-- <img src="img/maquinaria.jpg" alt="Maquinaria pesada" /> -->
+        <div class="tarjeta-icono">🚜</div>
+        <h3>Renta de Maquinaria</h3>
+        <p>Renta de maquinaria pesada y equipo topográfico especializado.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <div class="tarjeta-icono">📋</div>
+        <h3>Asesoría y Supervisión</h3>
+        <p>Asesoría técnica y supervisión profesional de obra civil.</p>
+      </div>
+
+      <div class="tarjeta-servicio">
+        <!-- TODO Katrina: reemplazar ícono con imagen del Word -->
+        <!-- <img src="img/infraestructura-educativa.jpg" alt="Infraestructura educativa" /> -->
+        <div class="tarjeta-icono">🏥</div>
+        <h3>Infraestructura Médica y Educativa</h3>
+        <p>Construcción de espacios médicos, aulas y centros educativos.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       PROYECTOS EJECUTADOS
+       Responsable: Jonathan
+       Pendiente:
+       - Agregar los proyectos faltantes (ver lista al final)
+       - Reemplazar .proyecto-sin-imagen con fotos reales del Word
+       - Agregar más fotos a la galería de obras
+  ====================================================== -->
+  <section class="seccion" id="proyectos">
+    <div class="seccion-encabezado centrado">
+      <span class="etiqueta">Nuestro portafolio</span>
+      <h2>Proyectos Ejecutados</h2>
+      <p class="texto-gris">Más de 20 proyectos con montos de hasta $127 millones de pesos</p>
+    </div>
+
+    <div class="proyectos-grid">
+
+      <div class="tarjeta-proyecto">
+        <img src="img/DistribuidorVialAguascalientes.jpg" alt="Distribuidor Vial Siglo XXI" />
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2019</span>
+          <h3>Distribuidor Vial Siglo XXI</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Gobierno del Estado de Aguascalientes</strong></p>
+          <p class="proyecto-monto">$32,620,003.76 MXN</p>
+          <p>Carretera 45 norte, salida a Zacatecas 2da etapa.</p>
+          <p class="texto-suave"><em>180 días — Feb a Ago 2019</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (Nissan) -->
+        <div class="proyecto-sin-imagen">Imagen: Rehabilitación Canales Nissan MX3</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2015–2016</span>
+          <h3>Rehabilitación Planta Nissan MX3</h3>
+          <p class="proyecto-cliente">Cliente: <strong>FUJITA CORP</strong></p>
+          <p class="proyecto-monto">$114,784,155.10 MXN</p>
+          <p>Rehabilitación de canales pluviales, instalaciones hidráulicas y anti-incendio.</p>
+          <p class="texto-suave"><em>390 días — Ene 2015 a Feb 2016</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (naves FUJITA) -->
+        <div class="proyecto-sin-imagen">Imagen: Naves Industriales FUJITA</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2015–2016</span>
+          <h3>Remodelación Naves Industriales</h3>
+          <p class="proyecto-cliente">Cliente: <strong>FUJITA CORP</strong></p>
+          <p class="proyecto-monto">$127,404,999.00 MXN</p>
+          <p>Monitoreo y automatización de naves, instalaciones eléctricas, sanitarias, voz y datos.</p>
+          <p class="texto-suave"><em>410 días — Ago 2015 a Oct 2016</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/punto45.jpg" alt="Centro Comercial Punto 45" />
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2016–2017</span>
+          <h3>Centro Comercial Punto 45</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Grupo Orvis</strong></p>
+          <p class="proyecto-monto">$38,259,268.73 MXN</p>
+          <p>Albañilerías, cimentaciones, instalaciones eléctricas, sanitarias y acabados.</p>
+          <p class="texto-suave"><em>310 días — Oct 2016 a Nov 2017</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (Muralia) -->
+        <div class="proyecto-sin-imagen">Imagen: Fraccionamiento Muralia</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2017–2018</span>
+          <h3>Fraccionamiento Muralia</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Grupo Plusvalterra / GC PEASA</strong></p>
+          <p class="proyecto-monto">$27,001,774.00 MXN</p>
+          <p>Urbanización de 15 hectáreas: terracerías, pavimentos, muro perimetral, casa club.</p>
+          <p class="texto-suave"><em>365 días — Sep 2017 a Sep 2018</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <img src="img/EdificioSt.jpg" alt="Torre Residencial San Telmo" />
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2018</span>
+          <h3>Torre Residencial San Telmo</h3>
+          <p class="proyecto-cliente">Cliente: <strong>GC PEASA, S.A. de C.V.</strong></p>
+          <p class="proyecto-monto">$11,205,659.00 MXN</p>
+          <p>Acabados, recubrimientos, instalaciones contra incendios y aire acondicionado.</p>
+          <p class="texto-suave"><em>180 días — May a Nov 2018</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (colector pluvial) -->
+        <div class="proyecto-sin-imagen">Imagen: Colector Pluvial Peñuelas II</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2018–2019</span>
+          <h3>Colector Pluvial "Peñuelas II"</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Gobierno del Estado de Aguascalientes</strong></p>
+          <p class="proyecto-monto">$21,867,887.77 MXN</p>
+          <p>Tubería de diámetro 2.54 mts de concreto, cajas de transición y obras de drenaje.</p>
+          <p class="texto-suave"><em>160 días — Nov 2018 a Abr 2019</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (planta fotovoltaica) -->
+        <div class="proyecto-sin-imagen">Imagen: Planta Fotovoltaica Tepezala II</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2019–2020</span>
+          <h3>Planta Fotovoltaica Tepezala II</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Infraestructura Energética Nova</strong></p>
+          <p class="proyecto-monto">$49,100,050.74 MXN</p>
+          <p>Terracerías, muros perimetrales, subestación eléctrica, tanque tormenta y puente vehicular.</p>
+          <p class="texto-suave"><em>370 días — May 2019 a May 2020</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (Tres Centurias) -->
+        <div class="proyecto-sin-imagen">Imagen: Sala de Conciertos Tres Centurias</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2016</span>
+          <h3>Sala de Conciertos Tres Centurias</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Realia S.A. de C.V.</strong></p>
+          <p class="proyecto-monto">$14,198,000.02 MXN</p>
+          <p>Pavimento, estructuras metálicas, concreto estampado, instalaciones al 100%.</p>
+          <p class="texto-suave"><em>210 días — Mar a Oct 2016</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (INAGUA P.T.A.R.) -->
+        <div class="proyecto-sin-imagen">Imagen: Planta Tratamiento INAGUA</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2016</span>
+          <h3>Planta de Tratamiento P.T.A.R. — INAGUA</h3>
+          <p class="proyecto-cliente">Cliente: <strong>INAGUA</strong></p>
+          <p class="proyecto-monto">$13,258,945.20 MXN</p>
+          <p>Capacidad 10 Lts/seg. Instalaciones hidrosanitarias, monitores y automatizaciones.</p>
+          <p class="texto-suave"><em>Parque Industrial PILA, San Francisco de los Romos</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (nave Chicalote) -->
+        <div class="proyecto-sin-imagen">Imagen: Nave Industrial Chicalote</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2014</span>
+          <h3>Nave Industrial — Chicalote</h3>
+          <p class="proyecto-cliente">Cliente: <strong>GP Inmobiliaria</strong></p>
+          <p class="proyecto-monto">$5,720,000.00 MXN</p>
+          <p>Terracerías, estructura metálica, albañilería, acabados e instalaciones especiales.</p>
+          <p class="texto-suave"><em>120 días — Feb a Jun 2014, Jesús María</em></p>
+        </div>
+      </div>
+
+      <div class="tarjeta-proyecto">
+        <!-- TODO Jonathan: reemplazar con imagen del Word (escuela 2025) -->
+        <div class="proyecto-sin-imagen">Imagen: Escuela Secundaria Villa de las Norias</div>
+        <div class="proyecto-info">
+          <span class="proyecto-anio">2025</span>
+          <h3>Escuela Secundaria — Villa de las Norias</h3>
+          <p class="proyecto-cliente">Cliente: <strong>Instituto de Infraestructura Física Educativa</strong></p>
+          <p class="proyecto-monto">$25,343,575.90 MXN</p>
+          <p>Obra nueva: cimentación, cisterna, accesos, cancelería, acabados generales.</p>
+          <p class="texto-suave"><em>120 días — May a Ago 2025</em></p>
+        </div>
+      </div>
+
+      <!-- TODO Jonathan: agregar los proyectos restantes del curriculum:
+           - Carretera Ags-Calvillo, SCT (2008) — $12,442,757
+           - Ciudad Argentum, Zacatecas (2009-2011) — $82,006,741
+           - Pavimento La Dichosa, Asientos (2013) — $302,841.37
+           - Ayuntamiento Villanueva, Zacatecas (2015-2016) — $40,600,000
+           - INAGUA edificio control y archivo (2016-2017) — $8,448,775.03
+           - Rincón de Romos, red agua potable (2018) — $2,482,580.94
+           - Rincón de Romos, alcantarillado (2018) — $2,568,702.05
+           - Terminal Ferroviaria K'eri (2021) — $11,015,000
+           - Paseos del Valle, Zacatecas (2021) — $17,610,073.23
+           - Puente Vehicular Calera, Zacatecas (2021-2023) — $5,418,749
+           - Tepezalá, infraestructura urbana (2022-2023) — $2,189,347.04
+           - Parque Béisbol Alberto Romo Chávez (2023-2024) — $3,848,000
+      -->
+
+    </div>
+
+    <!-- Galería rápida de obras -->
+    <div class="galeria-obras">
+      <h3 class="centrado">Galería de Obras</h3>
+      <div class="galeria-grid">
+        <img src="img/construccionAgs.jpg" alt="Construcción en Aguascalientes" />
+        <img src="img/ConstruccionAguascalientes.jpg" alt="Obras en Aguascalientes" />
+        <img src="img/ConstruccionAgs-2.jpg" alt="Proyectos en Aguascalientes" />
+        <img src="img/Construcciones.jpg" alt="Construcciones" />
+        <img src="img/Constructora.jpg" alt="Constructora PROTOCEM" />
+        <img src="img/DistribuidorVial.jpg" alt="Distribuidor Vial" />
+        <img src="img/PasoDesnivel.jpg" alt="Paso a desnivel" />
+        <img src="img/Construccion.jpg" alt="Obra en proceso" />
+        <!-- TODO Jonathan: agregar imágenes del Word aquí -->
+        <!-- <img src="img/obreros-trabajando.jpg" alt="Equipo en obra" /> -->
+        <!-- <img src="img/maquinaria-pesada.jpg" alt="Maquinaria pesada" /> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CLIENTES DESTACADOS
+       Responsable: Said
+       Pendiente:
+       - Conseguir logos de clientes si es posible
+       - Completar lista con todos los clientes del curriculum
+  ====================================================== -->
+  <section class="seccion fondo-oscuro" id="clientes">
+    <div class="seccion-encabezado centrado">
+      <span class="etiqueta">Quienes confían en nosotros</span>
+      <h2 class="texto-blanco">Nuestros Clientes</h2>
+      <p class="texto-gris">
+        Hemos trabajado con dependencias gubernamentales,
+        empresas transnacionales y desarrolladores privados.
+      </p>
+    </div>
+
+    <div class="clientes-grid">
+      <!-- TODO Said: si consigues logos, reemplazar texto con <img src="img/logo-cliente.png" /> -->
+      <div class="cliente-item">
+        <p>Gobierno del Estado<br /><strong>de Aguascalientes</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p><strong>FUJITA CORP</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p><strong>INAGUA</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>Infraestructura<br /><strong>Energética Nova</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p><strong>GC PEASA</strong><br />S.A. de C.V.</p>
+      </div>
+      <div class="cliente-item">
+        <p><strong>Grupo Orvis</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>SCT<br /><strong>Aguascalientes</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>H. Ayuntamiento<br /><strong>Rincón de Romos</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>H. Ayuntamiento<br /><strong>Villanueva, Zacatecas</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>Grupo<br /><strong>Plusvalterra</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>Grupo Inmobiliario<br /><strong>Zacatecas</strong></p>
+      </div>
+      <div class="cliente-item">
+        <p>Instituto de Infraestructura<br /><strong>Física Educativa</strong></p>
+      </div>
+    </div>
+
+    <p class="centrado texto-gris" style="margin-top:2rem;">
+      <em>"Cualquier información podrá ser avalada por nuestros clientes."</em>
+    </p>
+  </section>
+
+
+  <!-- =====================================================
+       LLAMADA A LA ACCIÓN
+       Responsable: Esteban
+       Estado: listo
+  ====================================================== -->
+  <section class="cta">
+    <div class="cta-contenido">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>Contamos con el equipo y la experiencia para ejecutarlo <strong>en tiempo y forma.</strong></p>
+      <a href="paginas/contacto.html" class="boton">Solicitar Cotización</a>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       PIE DE PÁGINA
+       Responsable: Esteban
+       Estado: listo
+  ====================================================== -->
+  <footer class="pie">
+    <div class="pie-contenido">
+
+      <div class="pie-marca">
+        <img src="img/brand.jpg" alt="PROTOCEM logo" class="pie-logo" />
+        <p class="texto-gris"><em>Proyectos Topográficos y Construcciones</em></p>
+        <p class="texto-gris">Aguascalientes, México &mdash; Desde 2008</p>
+      </div>
+
+      <div>
+        <h4>Navegación</h4>
+        <nav class="pie-nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#quienes-somos">¿Quiénes somos?</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#clientes">Clientes</a>
+          <a href="paginas/contacto.html">Contacto</a>
+        </nav>
+      </div>
+
+      <div>
+        <h4>Páginas del equipo</h4>
+        <nav class="pie-nav">
+          <a href="paginas/said.html">Said</a>
+          <a href="paginas/katrina.html">Katrina</a>
+          <a href="paginas/jonathan.html">Jonathan</a>
+        </nav>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p class="texto-gris">J. Encarnación Payen #515</p>
+        <p class="texto-gris">Fracc. Olivares Santana</p>
+        <p class="texto-gris">Aguascalientes, México</p>
+        <p class="texto-gris">protocem@hotmail.com</p>
+      </div>
+
+    </div>
+
+    <div class="pie-inferior">
+      <p>&copy; 2026 PROTOCEM &mdash; Proyectos Topográficos y Construcciones. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

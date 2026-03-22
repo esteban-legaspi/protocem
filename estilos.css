@@ -1,0 +1,690 @@
+/* ============================================================
+   ESTILOS PRINCIPALES — PROTOCEM
+   Empresa: Proyectos Topográficos y Construcciones
+   Estética: Industrial refinado — oscuro, sólido, profesional
+   Fuentes: Barlow Condensed (títulos) + Barlow (texto)
+   ============================================================ */
+
+
+/* ---- VARIABLES ---- */
+:root {
+  --amarillo:    #f5a623;       /* Amarillo construcción — color acento */
+  --oscuro:      #111111;       /* Negro casi puro — fondo principal    */
+  --oscuro-2:    #1a1a1a;       /* Negro ligeramente más claro          */
+  --gris-oscuro: #2a2a2a;       /* Gris oscuro — bordes y cards         */
+  --gris-medio:  #555555;       /* Gris medio — texto secundario        */
+  --gris-claro:  #f0f0f0;       /* Gris muy claro — fondos de sección   */
+  --blanco:      #ffffff;
+  --texto:       #e8e8e8;       /* Texto claro sobre fondos oscuros     */
+
+  --fuente-titulo: 'Barlow Condensed', sans-serif;
+  --fuente-texto:  'Barlow', sans-serif;
+}
+
+
+/* ---- RESET ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  color: var(--texto);
+  background-color: var(--oscuro);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulo);  /* Requerimiento: tipo de letra */
+  font-weight: 700;                   /* Requerimiento: negritas */
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+ul { list-style: none; }
+
+
+/* ---- CLASES DE UTILIDAD — Requerimientos escolares ---- */
+
+/* Alineaciones */
+.centrado     { text-align: center; }
+.a-derecha    { text-align: right; }
+.justificado  { text-align: justify; }
+
+/* Colores de texto */
+.texto-blanco  { color: var(--blanco); }
+.texto-amarillo { color: var(--amarillo); }
+.texto-gris    { color: var(--gris-medio); }
+.texto-suave   { color: var(--gris-medio); font-size: 0.9rem; }
+
+/* Fondos */
+.fondo-oscuro  { background-color: var(--oscuro-2); }
+.fondo-claro   { background-color: var(--gris-claro); color: var(--oscuro); }
+
+
+/* ---- ENCABEZADO ---- */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background-color: var(--oscuro);
+  border-bottom: 2px solid var(--amarillo);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navegacion a {
+  font-family: var(--fuente-titulo);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.navegacion a:hover { color: var(--amarillo); }
+
+.boton-nav {
+  background-color: var(--amarillo);
+  color: var(--oscuro) !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 700 !important;
+  transition: opacity 0.2s !important;
+}
+
+.boton-nav:hover {
+  opacity: 0.85;
+  color: var(--oscuro) !important;
+}
+
+
+/* ---- HERO ---- */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 5%;
+  position: relative;
+
+  /* Requerimiento: fondo de imagen */
+  background-image: url('img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Capa oscura sobre el fondo para legibilidad */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+.hero-contenido {
+  position: relative;
+  max-width: 800px;
+}
+
+.hero-subtitulo {
+  font-family: var(--fuente-titulo);
+  font-size: 1rem;          /* Requerimiento: tamaño de letra */
+  font-weight: 600;
+  color: var(--amarillo);   /* Requerimiento: color de letra */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 6rem;           /* Requerimiento: tamaño de letra */
+  color: var(--blanco);      /* Requerimiento: color de letra */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-descripcion {
+  font-size: 1.4rem;
+  color: var(--texto);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-slogan {
+  font-size: 1.1rem;
+  color: var(--amarillo);   /* Requerimiento: color de letra */
+  margin-bottom: 2.5rem;
+}
+
+.hero-botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--amarillo);
+  animation: bajar 1.5s ease-in-out infinite;
+}
+
+@keyframes bajar {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+
+/* ---- BOTONES ---- */
+.boton {
+  display: inline-block;
+  background-color: var(--amarillo);
+  color: var(--oscuro);
+  font-family: var(--fuente-titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 2.25rem;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.boton:hover { opacity: 0.85; }
+
+.boton-borde {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 2.25rem;
+  border-radius: 4px;
+  border: 2px solid var(--blanco);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.boton-borde:hover {
+  background-color: var(--blanco);
+  color: var(--oscuro);
+}
+
+
+/* ---- CIFRAS DESTACADAS ---- */
+.cifras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--amarillo);
+}
+
+.cifra {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cifra:last-child { border-right: none; }
+
+.cifra-numero {
+  font-family: var(--fuente-titulo);
+  font-size: 2.8rem;         /* Requerimiento: tamaño de letra */
+  font-weight: 800;
+  color: var(--oscuro);
+  line-height: 1;
+}
+
+.cifra-texto {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--oscuro);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ---- SECCIONES GENERALES ---- */
+.seccion {
+  padding: 6rem 5%;
+  background-color: var(--oscuro);
+}
+
+.seccion-encabezado {
+  margin-bottom: 3rem;
+}
+
+.seccion-encabezado h2 {
+  font-size: 3rem;          /* Requerimiento: tamaño de letra */
+  color: var(--blanco);
+  text-transform: uppercase;
+}
+
+.etiqueta {
+  display: inline-block;
+  font-family: var(--fuente-titulo);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--amarillo);   /* Requerimiento: color de letra */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+
+/* ---- QUIÉNES SOMOS ---- */
+.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.columna-texto p {
+  color: var(--texto);
+  margin-bottom: 1.25rem;
+  text-align: justify;    /* Requerimiento: alineación de texto */
+}
+
+.datos-empresa {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-left: 3px solid var(--amarillo);
+  background-color: var(--oscuro-2);
+  border-radius: 0 4px 4px 0;
+}
+
+.datos-empresa p {
+  font-size: 0.9rem;
+  color: var(--texto);
+  margin-bottom: 0.4rem !important;
+}
+
+.imagen-principal {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.imagenes-secundarias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.imagenes-secundarias img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+/* ---- SERVICIOS ---- */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-servicio {
+  background-color: var(--gris-oscuro);
+  border-radius: 4px;
+  overflow: hidden;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.tarjeta-servicio:hover {
+  border-color: var(--amarillo);
+  transform: translateY(-4px);
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tarjeta-icono {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background-color: var(--oscuro);
+}
+
+.tarjeta-servicio h3 {
+  font-size: 1.2rem;
+  color: var(--amarillo);    /* Requerimiento: color de letra */
+  padding: 1rem 1rem 0.4rem;
+  text-transform: uppercase;
+}
+
+.tarjeta-servicio p {
+  font-size: 0.88rem;
+  color: var(--gris-medio);
+  padding: 0 1rem 1.25rem;
+  line-height: 1.5;
+}
+
+
+/* ---- PROYECTOS ---- */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.tarjeta-proyecto {
+  background-color: var(--oscuro-2);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--gris-oscuro);
+  transition: border-color 0.2s;
+}
+
+.tarjeta-proyecto:hover { border-color: var(--amarillo); }
+
+.tarjeta-proyecto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Placeholder para imágenes del Word que aún no están */
+.proyecto-sin-imagen {
+  width: 100%;
+  height: 200px;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gris-medio);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  border-bottom: 1px dashed var(--gris-oscuro);
+}
+
+.proyecto-info {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.proyecto-anio {
+  display: inline-block;
+  background-color: var(--amarillo);
+  color: var(--oscuro);
+  font-family: var(--fuente-titulo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+}
+
+.proyecto-info h3 {
+  font-size: 1.25rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-cliente {
+  font-size: 0.88rem;
+  color: var(--gris-medio);
+  margin-bottom: 0.4rem;
+}
+
+.proyecto-monto {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;        /* Requerimiento: tamaño de letra */
+  font-weight: 700;
+  color: var(--amarillo);   /* Requerimiento: color de letra */
+  margin-bottom: 0.6rem;
+}
+
+.proyecto-info p {
+  font-size: 0.88rem;
+  color: var(--texto);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+
+/* ---- GALERÍA DE OBRAS ---- */
+.galeria-obras {
+  margin-top: 2rem;
+}
+
+.galeria-obras h3 {
+  font-size: 1.8rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.galeria-grid img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+
+/* ---- CLIENTES ---- */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.cliente-item {
+  background-color: var(--gris-oscuro);
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.cliente-item:hover { border-color: var(--amarillo); }
+
+.cliente-item p {
+  font-size: 0.9rem;
+  color: var(--gris-medio);
+  line-height: 1.4;
+}
+
+.cliente-item strong {
+  color: var(--blanco);      /* Requerimiento: negritas + color */
+  font-weight: 700;
+  display: block;
+}
+
+
+/* ---- LLAMADA A LA ACCIÓN ---- */
+.cta {
+  padding: 6rem 5%;
+  text-align: center;
+
+  /* Requerimiento: fondo de imagen */
+  background-image: url('img/construccionAgs.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.cta-contenido {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: var(--texto);
+  margin-bottom: 2rem;
+}
+
+
+/* ---- PIE DE PÁGINA ---- */
+.pie {
+  background-color: var(--oscuro-2);
+  border-top: 2px solid var(--amarillo);
+  padding: 4rem 5% 2rem;
+}
+
+.pie-contenido {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pie-logo { height: 50px; margin-bottom: 1rem; }
+
+.pie h4 {
+  font-family: var(--fuente-titulo);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--amarillo);    /* Requerimiento: color de letra */
+  margin-bottom: 1rem;
+}
+
+.pie-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pie-nav a {
+  font-size: 0.9rem;
+  color: var(--gris-medio);
+  transition: color 0.2s;
+}
+
+.pie-nav a:hover { color: var(--amarillo); }
+
+.pie p { font-size: 0.88rem; margin-bottom: 0.3rem; }
+
+.pie-inferior {
+  border-top: 1px solid var(--gris-oscuro);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gris-medio);
+}
+
+
+/* ---- RESPONSIVO (celular) ---- */
+@media (max-width: 900px) {
+
+  .encabezado {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .hero h1 { font-size: 3.5rem; }
+
+  .cifras { grid-template-columns: repeat(2, 1fr); }
+
+  .dos-columnas { grid-template-columns: 1fr; }
+
+  .pie-contenido { grid-template-columns: 1fr 1fr; }
+
+  .seccion { padding: 4rem 5%; }
+}
+
+@media (max-width: 600px) {
+
+  .hero h1 { font-size: 2.5rem; }
+
+  .cifras { grid-template-columns: 1fr 1fr; }
+
+  .pie-contenido { grid-template-columns: 1fr; }
+
+  .hero-botones { flex-direction: column; align-items: center; }
+}
