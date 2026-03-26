@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | PROTOCEM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            --negro-fondo: #0a0a0a;
+            --negro-tarjeta: #141414;
+            --dorado: #d4af37;
+            --blanco: #ffffff;
+            --gris: #a0a0a0;
+            --altura-menu: 80px;
+        }
+
+        /* --- BASE --- */
+        body {
+            background-color: var(--negro-fondo);
+            color: var(--blanco);
+            font-family: 'Barlow', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- MENÚ DINÁMICO --- */
+        .encabezado {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 0 5%;
+            height: var(--altura-menu);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 2px solid var(--dorado);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .encabezado--hidden { transform: translateY(-100%); }
+
+        .logo img { height: 45px; width: auto; display: block; }
+
+        .navegacion { display: flex; gap: 2rem; align-items: center; }
+
+        .navegacion a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navegacion a:hover { color: var(--dorado); }
+
+        .boton-nav {
+            background-color: var(--dorado);
+            color: black !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 700 !important;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .contacto-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: calc(var(--altura-menu) + 60px) auto 50px auto;
+        }
+
+        .header-contacto { text-align: center; margin-bottom: 50px; }
+
+        .header-contacto h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--dorado);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* --- GRID RESPONSIVO --- */
+        .grid-contacto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* --- CARDS E INFO --- */
+        .info-panel { display: flex; flex-direction: column; gap: 20px; }
+
+        .card {
+            background: var(--negro-tarjeta);
+            border: 1px solid #333;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .card:hover { border-color: var(--dorado); }
+
+        .card i { color: var(--dorado); font-size: 2rem; margin-bottom: 15px; display: block; }
+        
+        .card h3 { 
+            font-family: 'Barlow Condensed', sans-serif; 
+            color: var(--dorado); 
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .btn-ws {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-ws:hover { background: #1ebe57; transform: scale(1.05); }
+
+        /* --- FORMULARIO --- */
+        .form-panel {
+            background: var(--negro-tarjeta);
+            padding: 40px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 10px; color: var(--dorado); font-weight: 600; font-family: 'Barlow Condensed', sans-serif; }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: #000;
+            border: 1px solid #444;
+            color: white;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--dorado); outline: none; }
+
+        .btn-enviar {
+            background: var(--dorado);
+            color: black;
+            border: none;
+            padding: 18px;
+            width: 100%;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-enviar:hover { background: #b8952d; }
+
+        /* --- MÓVILES --- */
+        @media (max-width: 600px) {
+            .navegacion { gap: 1rem; }
+            .navegacion a { font-size: 0.8rem; }
+            .form-panel { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="encabezado" id="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../img/brand.jpg" alt="PROTOCEM">
+        </a>
+        <nav class="navegacion">
+            <a href="contacto.html">Contacto</a>
+            <a href="../index.html" class="boton-nav">Inicio</a>
+        </nav>
+    </header>
+
+    <div class="contacto-container">
+        <header class="header-contacto">
+            <h1>Contacto PROTOCEM</h1>
+            <p>Construyendo juntos tus proyectos en tiempo y forma</p>
+        </header>
+
+        <div class="grid-contacto">
+            <div class="info-panel">
+                <div class="card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WHATSAPP DIRECTO</h3>
+                    <p>+52 449 137 29 71</p>
+                    <a href="https://wa.me/524491372971" class="btn-ws" target="_blank">CHATEAR AHORA</a>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-location-dot"></i>
+                    <h3>UBICACIÓN</h3>
+                    <p>J. Encarnación Payen #515, Aguascalientes</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>CORREO ELECTRÓNICO</h3>
+                    <p>protocem@hotmail.com</p>
+                </div>
+            </div>
+
+            <div class="form-panel">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>NOMBRE</label>
+                        <input type="text" id="name" placeholder="Escribe tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CORREO</label>
+                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>MENSAJE</label>
+                        <textarea id="message" rows="6" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="button" class="btn-enviar" onclick="enviarViaMailto()">ENVIAR MENSAJE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* --- LÓGICA DEL MENÚ DINÁMICO --- */
+        let lastScrollY = window.scrollY;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                navbar.classList.add('encabezado--hidden');
+            } else {
+                navbar.classList.remove('encabezado--hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        /* --- LÓGICA DE ENVÍO POR MAILTO --- */
+        function enviarViaMailto() {
+            const nombre = document.getElementById('name').value;
+            const correo = document.getElementById('email').value;
+            const mensaje = document.getElementById('message').value;
+            
+            if(!nombre || !correo || !mensaje) {
+                alert("Por favor, rellena todos los campos.");
+                return;
+            }
+
+            const miCorreo = "tresmate9@gmail.com";
+            const asunto = encodeURIComponent("Consulta Web PROTOCEM - " + nombre);
+            const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`);
+            
+            window.location.href = `mailto:${miCorreo}?subject=${asunto}&body=${cuerpo}`;
+        }
+    </script>
+
+</body>
+</html>
