@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | PROTOCEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --negro-fondo: #0a0a0a;
+            --negro-tarjeta: #141414;
+            --dorado: #d4af37;
+            --blanco: #ffffff;
+            --gris: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--negro-fondo);
+            color: var(--blanco);
+            font-family: 'Barlow', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contacto-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .header-contacto {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header-contacto h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--dorado);
+        }
+
+        .grid-contacto {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--negro-tarjeta);
+            border: 1px solid var(--dorado);
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center; /* Centramos el contenido de las tarjetas */
+        }
+
+        .card i {
+            color: var(--dorado);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--dorado);
+        }
+
+        /* Botón de WhatsApp Estilo Minimalista */
+        .btn-ws {
+            background: #25D366; /* Color original de WhatsApp para que se reconozca */
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: 0.3s;
+        }
+
+        .btn-ws:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .qr-section img {
+            border: 8px solid white;
+            border-radius: 10px;
+            width: 180px;
+            margin-top: 15px;
+        }
+
+        /* Formulario */
+        .form-panel {
+            background: var(--negro-tarjeta);
+            border: 1px solid var(--dorado);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dorado);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .btn-enviar {
+            background: var(--dorado);
+            color: black;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .grid-contacto { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contacto-container">
+        <header class="header-contacto">
+            <h1 style="color: var(--dorado);">PROTOCEM</h1>
+            <p>Contáctanos para tu próximo proyecto de construcción</p>
+        </header>
+
+        <div class="grid-contacto">
+            <div class="info-panel">
+                
+                <div class="card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Directo</h3>
+                    <p>+52 449 137 29 71</p>
+                    
+                    <a href="https://wa.me/524491372971" class="btn-ws" target="_blank">
+                        <i class="fab fa-whatsapp" style="display:inline; font-size: 1rem; color: white; margin: 0 5px 0 0;"></i> 
+                        Chatear ahora
+                    </a>
+
+                    <div class="qr-section">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/524491372971" alt="Escanea para WhatsApp">
+                        <p style="font-size: 0.8rem; color: var(--gris); margin-top: 10px;">O escanea el código</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correo</h3>
+                    <p>protocem@hotmail.com</p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-location-dot"></i>
+                    <h3>Ubicación</h3>
+                    <p>J. Encarnación Payen #515, Aguascalientes</p>
+                </div>
+            </div>
+
+            <div class="form-panel">
+                <form>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Escribe tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="email" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
