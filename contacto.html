@@ -132,6 +132,13 @@
             transition: 0.3s;
         }
 
+        .qr-section img {
+            border: 8px solid white;
+            border-radius: 10px;
+            width: 180px;
+            margin-top: 15px;
+        }
+
         .btn-ws:hover { background: #1ebe57; transform: scale(1.05); }
 
         /* --- FORMULARIO --- */
@@ -204,9 +211,14 @@
                     <i class="fab fa-whatsapp"></i>
                     <h3>WHATSAPP DIRECTO</h3>
                     <p>+52 449 137 29 71</p>
-                    <a href="https://wa.me/524491372971" class="btn-ws" target="_blank">CHATEAR AHORA</a>
+                    <a href="https://wa.me/524491372971" class="btn-ws" target="_blank">CHATEAR AHORA</a> 
+                    
+                    <div class="qr-section">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/524491372971" alt="Escanea para WhatsApp">
+                        <p style="font-size: 0.8rem; color: var(--gris); margin-top: 10px;">O escanea el código</p>
+                    </div>
                 </div>
-
+    
                 <div class="card">
                     <i class="fas fa-location-dot"></i>
                     <h3>UBICACIÓN</h3>
