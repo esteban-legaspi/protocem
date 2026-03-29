@@ -219,24 +219,6 @@
                     <p>protocem@hotmail.com</p>
                 </div>
             </div>
-
-            <div class="form-panel">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label>NOMBRE</label>
-                        <input type="text" id="name" placeholder="Escribe tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label>CORREO</label>
-                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>MENSAJE</label>
-                        <textarea id="message" rows="6" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                    </div>
-                    <button type="button" class="btn-enviar" onclick="enviarViaMailto()">ENVIAR MENSAJE</button>
-                </form>
-            </div>
         </div>
     </div>
 
@@ -253,24 +235,6 @@
             }
             lastScrollY = window.scrollY;
         });
-
-        /* --- LÓGICA DE ENVÍO POR MAILTO --- */
-        function enviarViaMailto() {
-            const nombre = document.getElementById('name').value;
-            const correo = document.getElementById('email').value;
-            const mensaje = document.getElementById('message').value;
-            
-            if(!nombre || !correo || !mensaje) {
-                alert("Por favor, rellena todos los campos.");
-                return;
-            }
-
-            const miCorreo = "tresmate9@gmail.com";
-            const asunto = encodeURIComponent("Consulta Web PROTOCEM - " + nombre);
-            const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`);
-            
-            window.location.href = `mailto:${miCorreo}?subject=${asunto}&body=${cuerpo}`;
-        }
     </script>
 
 </body>
